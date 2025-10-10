@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+<h1 class="mb-4">📷 AI Photo Verifier</h1>
+
+<form method="post" enctype="multipart/form-data" class="p-4 bg-white rounded shadow">
+  <div class="mb-3">
+    <label class="form-label">Report section</label>
+    <select class="form-select" name="report_type" required>
+      <option value="illegal_dumping">Illegal dumping</option>
+      <option value="volunteer_works">Volunteer works</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Upload photo</label>
+    <input type="file" name="photo" class="form-control" accept="image/*" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Message to admin (optional)</label>
+    <textarea name="message" class="form-control" placeholder="Add context…"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Upload & Verify</button>
+</form>
+{% endblock %}
