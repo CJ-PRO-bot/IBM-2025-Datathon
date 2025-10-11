@@ -20,20 +20,6 @@ Net result: phone-simple reporting, AI-authenticated proof, faster cleanups, act
 ## Datasets
 Balanced binary image set: dirty_places vs invalid. We curated positives from Kaggle’s TACO Trash (kneroma/tacotrashdataset), Clean/Dirty Road (faizalkarim/cleandirty-road-classification), and Clean/Dirty Garbage (mfadliramadhan/cleandirtygarbage). Negatives reflect real spam/noise using Meme Images (hammadjavaid/6992-labeled-meme-images-dataset), Animals-10 (alessiocorrado99/animals10), Icons-50 (danhendrycks/icons50), and Selfies (jigrubhatt/selfieimagedetectiondataset). All images were EXIF-corrected, resized to 224×224, and split train ~2.4k / val ~0.6k (near-balanced) for fast CPU training on IBM LinuxONE.
 
-## Repo Structure: 
-├─ app.py
-├─ models.py
-├─ ai/
-│  ├─ verifier.py
-│  └─ waste_v1/
-│     ├─ validity_classifier.onnx        # <-- put model here
-│     └─ class_map.json                  # <-- label map
-├─ templates/                            # Jinja2 HTML
-├─ static/                               # css/js + uploads/
-├─ instance/                             # SQLite DB & instance files (gitignored)
-├─ requirements.txt
-└─ README.md/>
-
 ## Leveraging the IBM-Z technology to the solution:
 IBM LinuxONE (IBM Z) provided an interactive, secure cloud console with robust compute and rich Python packages that simplified our workflow and sped up experimentation. In 24 hours we curated data, trained, and validated a validity classifier for community waste photos, reaching ~83% accuracy with dirty-class recall 0.89, supported by ROC/PR curves. LinuxONE’s stable CPUs, ample memory, and fast I/O let us iterate quickly and save reproducible artifacts (confusion matrix/ROC/PR/class metrics and metrics.json) to a shared path for the team. The platform also made it easy to integrate data sources, perform batch feature extraction, and keep an auditable record of runs—ideal for civic deployments. Next, we’ll use the same environment to add an active-learning loop (admin feedback → periodic retrain) and to harden thresholds for recall-first triage in production.
 
