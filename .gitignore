@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Venv
+.venv/
+
+# App data
+instance/
+static/uploads/
+
+# Local config
+.env
+*.sqlite
+site.db
