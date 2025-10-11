@@ -9,28 +9,8 @@ source .venv/bin/activate
 # 2) Install deps
 pip install -r requirements.txt
 
-
 #Configure (env vars)
 #You can run with defaults (model path auto-detected) or set explicit env vars.
-
-#Windows (PowerShell)
-$env:PV_MODEL_PATH      = (Resolve-Path ".\ai\waste_v1\validity_classifier.onnx").Path
-$env:PV_CLASS_MAP_PATH  = (Resolve-Path ".\ai\waste_v1\class_map.json").Path
-$env:PV_MODEL_VERSION   = "waste_v1_onnx"
-$env:PV_ACTION_CUTOFF   = "0.50"     # threshold for 'dirty_places' routing
-$env:PV_DISABLE_DUP_PENALTY = "1"    # don't penalize near-duplicates (optional)
-$env:PV_DUP_DISTANCE        = "3"    # Hamming distance for pHash dedup (optional)
-
-
-#macOS/Linux (bash)
-export PV_MODEL_PATH="$(pwd)/ai/waste_v1/validity_classifier.onnx"
-export PV_CLASS_MAP_PATH="$(pwd)/ai/waste_v1/class_map.json"
-export PV_MODEL_VERSION="waste_v1_onnx"
-export PV_ACTION_CUTOFF="0.50"
-export PV_DISABLE_DUP_PENALTY="1"
-export PV_DUP_DISTANCE="3"
-
-#Tip: For the IBM demo, use a recall-first threshold 0.45–0.50.
 
 #Run (dev)
 python app.py
