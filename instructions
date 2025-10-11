@@ -17,5 +17,5 @@ python app.py
 # App starts on http://127.0.0.1:5000
 
 #log in
-#user: 123@gmail.com, password:123
-#admin@example.com, password:admin123
+#user: 123@gmail.com, password:123    (user dashboard)
+#admin@example.com, password:admin123 (admin dashboard)
