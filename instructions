@@ -11,7 +11,11 @@ pip install -r requirements.txt
 
 #Configure (env vars)
 #You can run with defaults (model path auto-detected) or set explicit env vars.
-
 #Run (dev)
+
 python app.py
 # App starts on http://127.0.0.1:5000
+
+#log in
+#user: 123@gmail.com, password:123
+#admin@example.com, password:admin123
