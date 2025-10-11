@@ -11,7 +11,7 @@ As shown in the flow chart, admin priortize valid photos, checking the authentic
 Everyone has a phone, so reporting stays tap-simple. Behind that, an AI pipeline verifies authenticity, removes duplicates, and triages by confidence: high-confidence "dirty" goes straight to "Action Now", unclear cases to "Re-check" with AI tips to retake better evidence. We prioritize recall—so real litter or waste hotspots doesn’t slip through, and immediate action can be taken—and we back that with threshold tuning from our PR curve. Admins get hotspot maps, photos of people littering, or doing volunteering work, to make sure actions and recognitions are given in a transparent manner. Our AI detects spam reports with the authentic ones, ensuring smooth workflow and immediate response. 
 Participation in community works isn’t just about doing it for sake now: our AI keep tracks of useful, verified reports, empowering individuals with fair recognitions by the admins through the convinient and visibility provided by the AI (leveraging the public people who can take photos and report to admins via mobile phone) keeping them motivated and active to contribute to their own clean environment.
 
-### “Our AI empowers every citizen and student to fight climate change — by turning every verified cleanup photo into measurable action for a cleaner, greener, and happier planet.” 
+#### “Our AI empowers every citizen and student to fight climate change — by turning every verified cleanup photo into measurable action for a cleaner, greener, and happier planet.” 
 
 Net result: phone-simple reporting, AI-authenticated proof, faster cleanups, actions and recognitions by community leaders, ensuring visible and motivated community momentum.
 
