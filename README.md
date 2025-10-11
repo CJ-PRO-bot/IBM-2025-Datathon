@@ -13,7 +13,7 @@ Participation in community works isn’t just about doing it for sake now: our A
 
 Net result: phone-simple reporting, AI-authenticated proof, faster cleanups, actions and recognitions, ensuring visible and motivated community momentum.
 
-## Audience
+## Target Audience
 1.	Citizens & Students (Primary Reporters) – Use their phones to snap and submit waste/dumping photos; get AI-verified credit, points, badges, and leaderboard rank that mirrors familiar social-media attention mechanics (recognition replaces likes/followers).
 2.	Teachers, Club Leaders & School Coordinators – Run weekly cleanup drives; rely on AI-authenticated photo attendance/proof, auto-compiled reports, and fair scoring to motivate sustained participation.
 3.	Municipal Admins / City Operations – Receive an auto-triaged evidence queue (valid/re-check), hotspot maps, and action logs to dispatch crews faster, track SLAs, and allocate budgets efficiently.
