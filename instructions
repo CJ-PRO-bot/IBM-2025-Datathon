@@ -3,7 +3,8 @@ python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
 
-#create a fresh .env with RELATIVE paths
+#create a fresh .env with RELATIVE paths(choose one from A, B and C):
+#option A
 @'
 PV_MODEL_PATH=ai/waste_v1/validity_classifier.onnx
 PV_CLASS_MAP_PATH=ai/waste_v1/class_map.json
@@ -12,6 +13,28 @@ PV_ACTION_CUTOFF=0.50
 PV_DISABLE_DUP_PENALTY=1
 PV_DUP_DISTANCE=3
 '@ | Set-Content -Path .\.env -Encoding utf8NoBOM
+
+#Option B(no-BOM UTF-8 via .NET) ✅
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[System.IO.File]::WriteAllText(".env", @'
+PV_MODEL_PATH=ai/waste_v1/validity_classifier.onnx
+PV_CLASS_MAP_PATH=ai/waste_v1/class_map.json
+PV_MODEL_VERSION=waste_v1_onnx
+PV_ACTION_CUTOFF=0.50
+PV_DISABLE_DUP_PENALTY=1
+PV_DUP_DISTANCE=3
+'@, $utf8NoBom)
+
+#Option C (ASCII encoding) — also fine here
+(all lines are plain ASCII)
+@'
+PV_MODEL_PATH=ai/waste_v1/validity_classifier.onnx
+PV_CLASS_MAP_PATH=ai/waste_v1/class_map.json
+PV_MODEL_VERSION=waste_v1_onnx
+PV_ACTION_CUTOFF=0.50
+PV_DISABLE_DUP_PENALTY=1
+PV_DUP_DISTANCE=3
+'@ | Set-Content -Path .\.env -Encoding Ascii
 
 #Configure (env vars)
 #You can run with defaults (model path auto-detected) or set explicit env vars.
