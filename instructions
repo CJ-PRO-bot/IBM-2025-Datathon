@@ -1,6 +1,9 @@
 # Windows PowerShell
-python -m venv .venv
-.\.venv\Scripts\activate
+# In that same folder/terminal in the IBM-2025-Datathon path:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+# Now activate the venv (note the leading & and quotes):
+& ".\.venv\Scripts\Activate.ps1"
 pip install -r requirements.txt
 
 #create a fresh .env with RELATIVE paths(In case A doesnt work, do B or C):
