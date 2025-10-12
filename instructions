@@ -3,7 +3,7 @@ python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
 
-#create a fresh .env with RELATIVE paths(choose one from A, B and C):
+#create a fresh .env with RELATIVE paths(In case A doesnt work, do B or C):
 #option A
 @'
 PV_MODEL_PATH=ai/waste_v1/validity_classifier.onnx
