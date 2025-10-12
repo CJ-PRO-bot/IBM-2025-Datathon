@@ -36,14 +36,9 @@ PV_DISABLE_DUP_PENALTY=1
 PV_DUP_DISTANCE=3
 '@ | Set-Content -Path .\.env -Encoding Ascii
 
-#Configure (env vars)
-#You can run with defaults (model path auto-detected) or set explicit env vars.
 #Run (dev)
 python app.py
 # App starts on http://127.0.0.1:5000
-
-#python version:
-python 3.10.x
 
 #log in
 #user: 123@gmail.com, password:123    (user dashboard)
