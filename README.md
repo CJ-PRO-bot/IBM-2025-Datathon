@@ -1,5 +1,4 @@
 # IBM Z Datathon 2025
-
 #### check the instruction file on how to set the project in your desktop.
 
 ## HeeboAI - "Community-Driven Solution to Tackle Waste Problem"
