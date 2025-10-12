@@ -13,11 +13,11 @@ Waste Pollution is Fueling Climate Change. Unmanaged waste dumps emit methane an
 
 #### “Fake reports, lost recognition, and untracked waste activities weaken our fight against climate change — while real volunteers remain unseen.”
 
-<img width="1600" height="864" alt="eee" src="https://github.com/user-attachments/assets/6d6e062d-7034-4a4d-9289-d4e6480ef70d" />
-As shown in the flow chart, admin priortize valid photos, checking the authentic ones, and then the recheck_photos saving time and energy, while ensuring immediate response to the authenticated reports. 
-
 ## Solution Statement
 Everyone has a phone, so reporting is "see waste → snap → submit." Anyone — students, farmers, citizens — can simply snap and upload a photo from their phone. The app’s AI instantly verifies authenticity, detecting if the image truly shows a cleanup or waste site. No special training or equipment needed — just a camera and a few seconds. AI automatically filters fake, old, or duplicate images using metadata, image hashes, and visual features. Genuine efforts get approved in real-time, while suspicious ones are flagged for recheck. Behind that simple flow, an AI-first pipeline does the heavy lifting. Uploads are auto-triaged: high-confidence → “Action Now,” else → “Re-check,” cutting manual review and letting admins dispatch crews faster with evidence they can trust. An active-learning loop lets admins’ decisions continuously improve the model and adapt to new spam patterns. Eliminates bias, errors, and delays caused by manual verification — ensuring fair recognition for all. Teachers and admins can easily monitor verified student activities through the dashboard. Encourages weekly or monthly volunteer drives, building a sustainable culture of community cleaning. The system connects citizens and institutions — everyone sees real impact and progress. Volunteers instantly receive acknowledgment for verified work.Admins can assign scores, badges, or certificates for consistent contributors.Recognition drives motivation — making cleanup a source of pride, not punishment. Every verified photo adds to a national map of environmental action. Helps track which areas are improving, polluted, or need attention — data for policy and awareness. Creates a shared digital story of impact — where individuals, schools, and communities are all visible contributors to a cleaner planet.
+
+<img width="1600" height="864" alt="eee" src="https://github.com/user-attachments/assets/6d6e062d-7034-4a4d-9289-d4e6480ef70d" />
+As shown in the flow chart, admin priortize valid photos, checking the authentic ones, and then the recheck_photos saving time and energy, while ensuring immediate response to the authenticated reports. 
 
 #### “Our AI empowers every citizen and student to fight climate change — by turning every verified cleanup photo into measurable action for a cleaner, greener, and happier planet.” 
 
