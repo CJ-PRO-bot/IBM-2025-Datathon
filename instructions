@@ -39,6 +39,7 @@ PV_DUP_DISTANCE=3
 #Run (dev)
 python app.py
 # App starts on http://127.0.0.1:5000
+#for convinience we have uploaded test photos in my repo "test" file, so u can test the photos in the AI directly. 
 
 #log in
 #user: 123@gmail.com, password:123    (user dashboard)
