@@ -1,13 +1,20 @@
-# Windows PowerShell
-# In that same folder/terminal in the IBM-2025-Datathon path:
+# Windows PowerShell / PowerShell 7
+# Run these in the repo root: IBM-2025-Datathon
+
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
-# Now activate the venv (note the leading & and quotes):
+# 1) Create and activate virtual env (if .venv doesn't exist yet)
+python -m venv .venv
 & ".\.venv\Scripts\Activate.ps1"
+
+# 2) Install deps
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 
-#create a fresh .env with RELATIVE paths(In case A doesnt work, do B or C):
-#option A
+# 3) Create .env with RELATIVE paths
+# Use ONE of the options below:
+
+# Option A — PowerShell 7+ only (has utf8NoBOM)
 @'
 PV_MODEL_PATH=ai/waste_v1/validity_classifier.onnx
 PV_CLASS_MAP_PATH=ai/waste_v1/class_map.json
@@ -17,7 +24,7 @@ PV_DISABLE_DUP_PENALTY=1
 PV_DUP_DISTANCE=3
 '@ | Set-Content -Path .\.env -Encoding utf8NoBOM
 
-#Option B(no-BOM UTF-8 via .NET) ✅
+# Option B — Windows PowerShell 5.1 compatible (preferred for compatibility)
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 [System.IO.File]::WriteAllText(".env", @'
 PV_MODEL_PATH=ai/waste_v1/validity_classifier.onnx
@@ -28,8 +35,7 @@ PV_DISABLE_DUP_PENALTY=1
 PV_DUP_DISTANCE=3
 '@, $utf8NoBom)
 
-#Option C (ASCII encoding) — also fine here
-(all lines are plain ASCII)
+# Option C — ASCII also works (keys/values are plain ASCII)
 @'
 PV_MODEL_PATH=ai/waste_v1/validity_classifier.onnx
 PV_CLASS_MAP_PATH=ai/waste_v1/class_map.json
@@ -39,12 +45,17 @@ PV_DISABLE_DUP_PENALTY=1
 PV_DUP_DISTANCE=3
 '@ | Set-Content -Path .\.env -Encoding Ascii
 
-#Run (dev)
+# 4) Ensure model artifacts exist at:
+#    ai/waste_v1/validity_classifier.onnx
+#    ai/waste_v1/class_map.json
+
+# 5) Run the app (dev)
 python app.py
-# App starts on http://127.0.0.1:5000
-#for convinience we have uploaded test photos in my repo "test_photos" file, so u can test the photos in the AI directly. 
+# App starts at: http://127.0.0.1:5000
 
-#log in
-#user: 123@gmail.com, password:123    (user dashboard)
-#admin@example.com, password:admin123 (admin dashboard)
+# 6) Test photos
+# Use images from the `test_photos` folder in this repo to try the AI.
 
+# 7) Demo logins (for judging only — do NOT reuse in production)
+# User:  123@gmail.com / 123
+# Admin: admin@example.com / admin123
