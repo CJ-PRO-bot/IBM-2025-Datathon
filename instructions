@@ -3,13 +3,16 @@
 
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
-# 1) Create and activate virtual env (if .venv doesn't exist yet)
-python -m venv .venv
+# 1) Create and activate virtual env (Python 3.11 recommended)
+py -3.11 -m venv .venv
 & ".\.venv\Scripts\Activate.ps1"
 
-# 2) Install deps
+# 2) Install dependencies
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+
+# (If using Python 3.13 and pip fails on onnxruntime or Pillow, run this:)
+# pip install "onnxruntime>=1.23,<1.24" "Pillow>=11.0.0" "opencv-python-headless>=4.10.0.84" --upgrade
 
 # 3) Create .env with RELATIVE paths
 # Use ONE of the options below:
