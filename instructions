@@ -1,6 +1,11 @@
 # Windows PowerShell / PowerShell 7
 # Run these in the repo root: IBM-2025-Datathon
 
+# (Optional) See installed Python versions (look for 3.11)
+py -0p
+# (Optional) If Python 3.11 isn't installed, run once:
+# winget install -e --id Python.Python.3.11
+
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 # 1) Create and activate virtual env (Python 3.11 recommended)
@@ -11,8 +16,11 @@ py -3.11 -m venv .venv
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 
-# (If using Python 3.13 and pip fails on onnxruntime or Pillow, run this:)
-# pip install "onnxruntime>=1.23,<1.24" "Pillow>=11.0.0" "opencv-python-headless>=4.10.0.84" --upgrade
+# If you're on Python 3.13 and pip failed on onnxruntime or Pillow, run this:
+# pip install "onnxruntime>=1.23,<1.24" "Pillow>=11.0.0" "opencv-python-headless>=4.10.0.84" "numpy>=2.0" --upgrade
+
+# (Optional) Quick sanity check (should print 'ok')
+python -c "import onnxruntime, PIL, flask, imagehash, piexif, numpy; print('ok')"
 
 # 3) Create .env with RELATIVE paths
 # Use ONE of the options below:
