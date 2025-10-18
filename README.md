@@ -1,5 +1,5 @@
 # IBM Z Datathon 2025
-#### Make sure to check the "instruction" file on the repo section on how to set the project in your desktop.
+#### Make sure to check the "instruction" file on the repo section on how to set and run the project in your desktop.
 
 
 ## HeeboAI - "Community-Driven Solution to Tackle Waste Problem"
