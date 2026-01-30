@@ -42,4 +42,4 @@ IBM LinuxONE (IBM Z) provided an interactive, secure cloud console with robust c
 <img width="1856" height="980" alt="Screenshot 2025-10-11 151557" src="https://github.com/user-attachments/assets/48558af9-4629-4577-a33a-de7962d22223" />
 <img width="1857" height="979" alt="Screenshot 2025-10-11 151631" src="https://github.com/user-attachments/assets/940deadf-0fd5-43ae-aa3b-5937ba58f0dd" />
 
-video link: https://drive.google.com/file/d/1DU5P0848lgp4TmJhwTdvoC9joZPekMYr/view?usp=sharing
+
